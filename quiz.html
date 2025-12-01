@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
 <meta charset="utf-8" />
-<title>クイズ – Cyber Quiz</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>再生 – Cyber Quiz</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
-<h1>動画再生</h1>
+  <h1>クイズ再生</h1>
 
-<video id="player" width="100%" controls></video>
+  <div id="playerWrap">
+    <!-- 動的に video / audio が入る -->
+  </div>
 
-<button id="nextBtn" onclick="nextVideo()">次へ</button>
+  <div id="controls">
+    <button class="btn" id="nextBtn" onclick="nextVideo()">次の項目</button>
+  </div>
 
-<h2>もう一度見たい？</h2>
-<div id="replayButtons"></div>
+  <div id="status" style="text-align:center; margin-top:8px; color:#9eefff;"></div>
 
-<button onclick="goAnswer()">回答する</button>
+  <div id="review-area" style="display:none; margin-top:18px;">
+    <h2>もう一度聞く / 見る（任意）</h2>
+    <div id="review-buttons" class="review-grid"></div>
+    <div style="margin-top:12px;">
+      <button class="btn" id="toAnswerBtn" onclick="goAnswer()" disabled>解答へ進む（全再生後のみ）</button>
+    </div>
+  </div>
 </div>
 
 <script src="script.js"></script>
-<script>
-initQuiz();
-</script>
-
+<script>initQuiz();</script>
 </body>
 </html>
