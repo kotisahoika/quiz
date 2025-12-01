@@ -1,0 +1,9 @@
+{
+  "name": "Cyber Quiz",
+  "short_name": "CyberQuiz",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00eaff",
+  "icons": []
+}
