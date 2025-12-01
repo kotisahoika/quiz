@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>設定 – Cyber Quiz</title>
 <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
 </head>
 <body>
 <div class="container">
-<h1>動画クイズ設定</h1>
+  <h1>動画／音声クイズ：設定</h1>
 
-<div id="inputs"></div>
+  <div id="inputs"></div>
 
-<h2>正解を選択（A〜D）</h2>
-<div id="correctSelect">
-  <label><input type="radio" name="correct" value="0" checked> A</label>
-  <label><input type="radio" name="correct" value="1"> B</label>
-  <label><input type="radio" name="correct" value="2"> C</label>
-  <label><input type="radio" name="correct" value="3"> D</label>
+  <h2>正解を選択（A〜D）</h2>
+  <div id="correctSelect" class="correct-select">
+    <label><input type="radio" name="correct" value="0" checked> A</label>
+    <label><input type="radio" name="correct" value="1"> B</label>
+    <label><input type="radio" name="correct" value="2"> C</label>
+    <label><input type="radio" name="correct" value="3"> D</label>
+  </div>
+
+  <button class="btn" id="startBtn" onclick="startQuiz()">クイズ開始</button>
+
+  <p style="text-align:center; margin-top:8px; color:#9eefff; opacity:0.8;">
+    ※ 動画の場合はランダム位置からサムネを自動生成します（5%〜95%の間）。
+  </p>
 </div>
 
-<button onclick="startQuiz()">クイズ開始</button>
-</div>
+<script src="script.js"></script>
+<script>createFileSelectors();</script>
+</body>
+</html>
 
 <script src="script.js"></script>
 <script>
