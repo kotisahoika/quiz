@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>設定 – Cyber Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>動画クイズ設定</h1>
+
+<div id="inputs"></div>
+
+<h2>正解を選択（A〜D）</h2>
+<div id="correctSelect">
+  <label><input type="radio" name="correct" value="0" checked> A</label>
+  <label><input type="radio" name="correct" value="1"> B</label>
+  <label><input type="radio" name="correct" value="2"> C</label>
+  <label><input type="radio" name="correct" value="3"> D</label>
+</div>
+
+<button onclick="startQuiz()">クイズ開始</button>
+</div>
+
+<script src="script.js"></script>
+<script>
+createFileSelectors(); // UIを生成
+</script>
+</body>
+</html>
