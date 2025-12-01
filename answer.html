@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>回答 – Cyber Quiz</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
-<h1>どれが別作者？</h1>
+  <h1>どれが別作者？</h1>
 
-<div id="choices"></div>
+  <div id="choices" class="choices"></div>
 
-<h2 id="result"></h2>
+  <h2 id="result" style="text-align:center; margin-top:12px;"></h2>
 
-<button onclick="location.href='index.html'">最初に戻る</button>
+  <div style="margin-top:16px;">
+    <button class="btn" id="backBtn" onclick="backToQuiz()">戻る（解答前のみ有効）</button>
+    <button class="btn" onclick="restart()" style="margin-top:8px;">最初に戻る</button>
+  </div>
 </div>
 
 <script src="script.js"></script>
-<script>
-initAnswer();
-</script>
-
+<script>initAnswer();</script>
 </body>
 </html>
