@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>クイズ – Cyber Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>動画再生</h1>
+
+<video id="player" width="100%" controls></video>
+
+<button id="nextBtn" onclick="nextVideo()">次へ</button>
+
+<h2>もう一度見たい？</h2>
+<div id="replayButtons"></div>
+
+<button onclick="goAnswer()">回答する</button>
+</div>
+
+<script src="script.js"></script>
+<script>
+initQuiz();
+</script>
+
+</body>
+</html>
